@@ -1,6 +1,6 @@
-const fastify = require('fastify')
+const fastify = require('fastify');
 const travelController = require('../controllers/travelController');
-const cors = require('@fastify/cors')
+const cors = require('@fastify/cors');
 
 const server = fastify();
 
@@ -23,5 +23,5 @@ server.delete('/trips/:id', travelController.deleteTrip)
 
 server.listen({
     host: '0.0.0.0',
-    port: process.env.PORT ?? 3333
+    port: process.env.PORT ?? 3333,
 })
